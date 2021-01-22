@@ -66,6 +66,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <variation key="heightClass=compact" alignment="center"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f9Z-8n-om6">
                                 <rect key="frame" x="107" y="722" width="200" height="110"/>
@@ -94,6 +95,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="MI1-nN-11x"/>
                                 </constraints>
+                                <variation key="heightClass=compact" axis="horizontal" distribution="fillEqually"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -101,7 +103,9 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f9Z-8n-om6" secondAttribute="bottom" constant="30" id="5bF-us-bIr"/>
                             <constraint firstItem="ry2-pD-SRy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="9PJ-uI-VyP"/>
-                            <constraint firstItem="ry2-pD-SRy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="OSJ-Lz-Lcl"/>
+                            <constraint firstItem="ry2-pD-SRy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="OSJ-Lz-Lcl">
+                                <variation key="heightClass=compact" constant="15"/>
+                            </constraint>
                             <constraint firstItem="f9Z-8n-om6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lqN-Da-mGu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ry2-pD-SRy" secondAttribute="trailing" constant="10" id="oXs-cU-djd"/>
                         </constraints>
