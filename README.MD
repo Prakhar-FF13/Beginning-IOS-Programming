@@ -1,1 +1,1 @@
-# Beginning IOS Programming Book Excercises
+# Beginning IOS Programming Book Exercises.
