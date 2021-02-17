@@ -12,6 +12,7 @@ class RestaurantTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.tintColor = .systemYellow;
     }
     
     @IBOutlet var nameLabel: UILabel!;

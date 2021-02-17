@@ -61,5 +61,40 @@ class RestaurantViewTableController: UITableViewController {
     }
     
     lazy var dataSource = configureDataSource();
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet);
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil);
+        
+        optionMenu.addAction(cancelAction);
+        
+        let reserveActionHandler = { (action: UIAlertAction!) -> Void in
+            let alertMessage = UIAlertController(title: "Not available yet", message: "Sorry, this feature is not available yet. Please retry later.", preferredStyle: .alert);
+            
+            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil));
+            
+            self.present(alertMessage, animated: true, completion: nil);
+        }
+        
+        let reserveAction = UIAlertAction(title: "Reserve a table", style: .default, handler: reserveActionHandler);
+        
+        optionMenu.addAction(reserveAction);
+        
+        
+        let favouriteAction = UIAlertAction(title: "Favourite", style: .default, handler: {
+            (action: UIAlertAction!) -> Void in
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            
+            cell?.accessoryType = .checkmark;
+        });
+            
+        optionMenu.addAction(favouriteAction);
+        
+        tableView.deselectRow(at: indexPath, animated: false);
+        
+        present(optionMenu, animated: true, completion: nil)
+    }
 
 }
