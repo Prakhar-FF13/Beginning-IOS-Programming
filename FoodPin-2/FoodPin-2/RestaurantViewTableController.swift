@@ -104,8 +104,19 @@ class RestaurantViewTableController: UITableViewController {
             cell?.tintColor = .systemYellow;
             self.restaurantIsFavourite[indexPath.row] = true;
         });
-            
+        
         optionMenu.addAction(favouriteAction);
+        
+        let unFavouriteAction = UIAlertAction(title: "Remove from favourites", style: .default, handler: {
+            (action: UIAlertAction!) -> Void in
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            
+            cell?.accessoryType = .none;
+            self.restaurantIsFavourite[indexPath.row] = false;
+        });
+        
+        optionMenu.addAction(unFavouriteAction);
         
         tableView.deselectRow(at: indexPath, animated: false);
         
