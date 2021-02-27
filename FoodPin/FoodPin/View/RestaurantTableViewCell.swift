@@ -2,26 +2,28 @@
 //  RestaurantTableViewCell.swift
 //  FoodPin
 //
-//  Created by Prakhar Kumar on 14/02/21.
+//  Created by Simon Ng on 15/10/2020.
 //
 
 import UIKit
 
 class RestaurantTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
     @IBOutlet var thumbnailImageView: UIImageView! {
         didSet {
-            thumbnailImageView.layer.cornerRadius = 20.0;
-            thumbnailImageView.clipsToBounds = true;
+            thumbnailImageView.layer.cornerRadius = 20.0
+            thumbnailImageView.clipsToBounds = true
         }
+    }
+    @IBOutlet var favoriteImageView: UIImageView! 
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    
+        self.tintColor = .systemYellow
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,5 +31,6 @@ class RestaurantTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
 
 }
