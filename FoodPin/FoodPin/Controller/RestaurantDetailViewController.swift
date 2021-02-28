@@ -13,13 +13,22 @@ class RestaurantDetailViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never;
+        
+        restaurantStackView.layer.cornerRadius = 10.0;
 
-        restaurantImageView.image = UIImage(named: restaurantImageName);
+        restaurantImageView.image = UIImage(named: restaurant.image);
+        restaurantName.text = restaurant.name;
+        restaurantType.text = restaurant.type;
+        restaurantLocation.text = restaurant.location;
     }
     
     @IBOutlet var restaurantImageView: UIImageView!
+    @IBOutlet var restaurantName: UILabel!
+    @IBOutlet var restaurantType: UILabel!
+    @IBOutlet var restaurantLocation: UILabel!
+    @IBOutlet var restaurantStackView: UIStackView!
     
-    var restaurantImageName = "";
+    var restaurant: Restaurant = Restaurant(name: "", type: "", location: "", image: "", isFavorite: false);
     
 
     /*

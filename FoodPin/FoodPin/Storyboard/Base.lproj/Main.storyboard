@@ -179,24 +179,55 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VF9-zm-60v">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ymM-GF-32u">
+                                <rect key="frame" x="20" y="98" width="350" height="87.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bz-No-mbD">
+                                        <rect key="frame" x="136.66666666666666" y="0.0" width="76.666666666666657" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j20-tj-5su">
+                                        <rect key="frame" x="155.33333333333334" y="40" width="39.333333333333343" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5c-eG-g46">
+                                        <rect key="frame" x="140.66666666666666" y="65.666666666666657" width="69" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nhR-YM-ZIn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VF9-zm-60v" firstAttribute="leading" secondItem="nhR-YM-ZIn" secondAttribute="leading" id="0Qp-mA-nFD"/>
+                            <constraint firstItem="nhR-YM-ZIn" firstAttribute="trailing" secondItem="ymM-GF-32u" secondAttribute="trailing" constant="20" id="8CL-1A-6b6"/>
                             <constraint firstItem="VF9-zm-60v" firstAttribute="trailing" secondItem="nhR-YM-ZIn" secondAttribute="trailing" id="GvW-TF-tni"/>
+                            <constraint firstItem="ymM-GF-32u" firstAttribute="leading" secondItem="nhR-YM-ZIn" secondAttribute="leading" constant="20" id="LoH-me-rbH"/>
                             <constraint firstAttribute="bottom" secondItem="VF9-zm-60v" secondAttribute="bottom" id="Y5V-Gi-MTX"/>
+                            <constraint firstItem="ymM-GF-32u" firstAttribute="top" secondItem="nhR-YM-ZIn" secondAttribute="top" constant="10" id="rX5-oa-zwF"/>
                             <constraint firstItem="VF9-zm-60v" firstAttribute="top" secondItem="Q1Z-hW-pf0" secondAttribute="top" id="tKd-eC-6Ac"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GaI-4C-dNU"/>
                     <connections>
                         <outlet property="restaurantImageView" destination="VF9-zm-60v" id="y1l-MK-TpX"/>
+                        <outlet property="restaurantLocation" destination="Q5c-eG-g46" id="zvw-TN-mWR"/>
+                        <outlet property="restaurantName" destination="6bz-No-mbD" id="KYC-sn-F65"/>
+                        <outlet property="restaurantStackView" destination="ymM-GF-32u" id="TAq-qP-Ou5"/>
+                        <outlet property="restaurantType" destination="j20-tj-5su" id="IY4-kg-AgC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4of-aR-pam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1685" y="89"/>
+            <point key="canvasLocation" x="1684.6153846153845" y="88.862559241706151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1uh-3Y-DPT">
