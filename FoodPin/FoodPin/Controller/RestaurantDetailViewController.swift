@@ -20,6 +20,7 @@ class RestaurantDetailViewController: UIViewController {
         tableView.delegate = self;
         tableView.dataSource = self;
         tableView.separatorStyle = .none;
+        tableView.contentInsetAdjustmentBehavior = .never;
         
         navigationController?.navigationBar.prefersLargeTitles = false;
         
@@ -63,5 +64,12 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
         default:
             fatalError("Failed to initialize the table view cell for detail view controller");
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
