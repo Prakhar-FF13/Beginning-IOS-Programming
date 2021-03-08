@@ -193,6 +193,10 @@ class RestaurantTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         
+        navigationController?.navigationBar.prefersLargeTitles = true;
+        
+        navigationItem.backButtonTitle = "";
+        
         navigationController?.hidesBarsOnSwipe = true;
     }
 }
