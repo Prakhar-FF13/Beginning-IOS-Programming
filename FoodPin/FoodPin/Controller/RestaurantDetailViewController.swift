@@ -72,4 +72,8 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent;
+    }
 }
