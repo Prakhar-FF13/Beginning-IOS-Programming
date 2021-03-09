@@ -1,3 +1,10 @@
+//
+//  UIColor+Ext.swift
+//  FoodPin
+//
+//  Created by Simon Ng on 28/10/2020.
+//
+
 import UIKit
 
 extension UIColor {

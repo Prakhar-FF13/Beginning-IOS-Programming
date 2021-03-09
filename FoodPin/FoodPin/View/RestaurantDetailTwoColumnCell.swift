@@ -2,41 +2,40 @@
 //  RestaurantDetailTwoColumnCell.swift
 //  FoodPin
 //
-//  Created by Prakhar Kumar on 05/03/21.
+//  Created by Simon Ng on 27/10/2020.
 //
 
 import UIKit
 
 class RestaurantDetailTwoColumnCell: UITableViewCell {
-    
+
     @IBOutlet var column1TitleLabel: UILabel! {
         didSet {
-            column1TitleLabel.text = column1TitleLabel.text?.uppercased();
-            
-            column1TitleLabel.numberOfLines = 0;
+            column1TitleLabel.text = column1TitleLabel.text?.uppercased()
+            column1TitleLabel.numberOfLines = 0
+            column1TitleLabel.adjustsFontForContentSizeCategory = true
         }
     }
-    
     @IBOutlet var column1TextLabel: UILabel! {
         didSet {
-            column1TextLabel.numberOfLines = 0;
+            column1TextLabel.numberOfLines = 0
+            column1TextLabel.adjustsFontForContentSizeCategory = true
         }
     }
-    
     @IBOutlet var column2TitleLabel: UILabel! {
         didSet {
-            column2TitleLabel.text = column2TitleLabel.text?.uppercased();
-            
-            column2TitleLabel.numberOfLines = 0;
+            column2TitleLabel.text = column2TitleLabel.text?.uppercased()
+            column2TitleLabel.numberOfLines = 0
+            column2TitleLabel.adjustsFontForContentSizeCategory = true
+        }
+    }
+    @IBOutlet var column2TextLabel: UILabel! {
+        didSet {
+            column2TextLabel.numberOfLines = 0
+            column2TextLabel.adjustsFontForContentSizeCategory = true
         }
     }
     
-    @IBOutlet var column2TextLabel: UILabel! {
-        didSet {
-            column2TextLabel.numberOfLines = 0;
-        }
-    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -40,25 +40,27 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Enable large title for navigation bar
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.hidesBarsOnSwipe = true
+        navigationItem.backButtonTitle = ""
+        
+        // Customize the navigation bar appearance
         if let appearance = navigationController?.navigationBar.standardAppearance {
+        
             appearance.configureWithTransparentBackground()
             
             if let customFont = UIFont(name: "Nunito-Bold", size: 45.0) {
-                appearance.titleTextAttributes = [.foregroundColor: UIColor(named:"NavigationBarTitle")!]
+                
+                appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "NavigationBarTitle")!]
                 appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "NavigationBarTitle")!, .font: customFont]
             }
             
-            navigationController?.navigationBar.standardAppearance = appearance;
-            navigationController?.navigationBar.compactAppearance = appearance;
-            navigationController?.navigationBar.scrollEdgeAppearance = appearance;
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.compactAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
         }
-        
-        // Enable large title for navigation bar
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.hidesBarsOnSwipe = true;
-        
-        navigationItem.backButtonTitle = "";
-        
+
         // Set up the data source of the table view
         tableView.dataSource = dataSource
         tableView.separatorStyle = .none
@@ -72,6 +74,13 @@ class RestaurantTableViewController: UITableViewController {
         
         tableView.cellLayoutMarginsFollowReadableWidth = true
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // MARK: - UITableView Diffable Data Source
@@ -188,15 +197,5 @@ class RestaurantTableViewController: UITableViewController {
                 destinationController.restaurant = self.restaurants[indexPath.row]
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated);
-        
-        navigationController?.navigationBar.prefersLargeTitles = true;
-        
-        navigationItem.backButtonTitle = "";
-        
-        navigationController?.hidesBarsOnSwipe = true;
     }
 }
