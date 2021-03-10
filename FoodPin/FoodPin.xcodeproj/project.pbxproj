@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		51331E9025F8E016006086AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51331E8F25F8E016006086AF /* MapKit.framework */; };
 		51331E9325F8E1E9006086AF /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51331E9225F8E1E9006086AF /* RestaurantDetailMapCell.swift */; };
+		51331E9625F8EB71006086AF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51331E9525F8EB71006086AF /* MapViewController.swift */; };
 		F42A6C6F2543E05F009E2876 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F42A6C6D2543E05F009E2876 /* Nunito-Bold.ttf */; };
 		F42A6C702543E05F009E2876 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F42A6C6E2543E05F009E2876 /* Nunito-Regular.ttf */; };
 		F42A6C73254569E3009E2876 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A6C72254569E3009E2876 /* RestaurantDetailHeaderView.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		51331E8F25F8E016006086AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		51331E9225F8E1E9006086AF /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
+		51331E9525F8EB71006086AF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F42A6C6D2543E05F009E2876 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		F42A6C6E2543E05F009E2876 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		F42A6C72254569E3009E2876 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				F48D555A2536BFE000CE6DE4 /* RestaurantTableViewController.swift */,
 				F4D1A1D82540370700CCD3FA /* RestaurantDetailViewController.swift */,
 				F42A6C812549DE6F009E2876 /* NavigationController.swift */,
+				51331E9525F8EB71006086AF /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				F4D1A1D92540370700CCD3FA /* RestaurantDetailViewController.swift in Sources */,
 				F42A6C73254569E3009E2876 /* RestaurantDetailHeaderView.swift in Sources */,
 				F48D555B2536BFE000CE6DE4 /* RestaurantTableViewController.swift in Sources */,
+				51331E9625F8EB71006086AF /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

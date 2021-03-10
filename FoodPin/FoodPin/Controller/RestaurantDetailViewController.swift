@@ -100,6 +100,14 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
         
         tableView.deselectRow(at: indexPath, animated: true);
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            let destinationController = segue.destination as! MapViewController
+            
+            destinationController.restaurant = restaurant;
+        }
+    }
 
 }
 
