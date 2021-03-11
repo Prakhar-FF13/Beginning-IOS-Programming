@@ -20,6 +20,7 @@ class RestaurantDetailViewController: UIViewController {
         // Configure the navigation bar appearance
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.hidesBarsOnSwipe = false
+        navigationItem.backButtonTitle = "";
         
         tableView.contentInsetAdjustmentBehavior = .never
         
