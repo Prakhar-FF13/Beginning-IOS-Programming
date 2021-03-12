@@ -103,10 +103,19 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showMap" {
+        switch segue.identifier {
+        case "showMap":
             let destinationController = segue.destination as! MapViewController
+        
+            destinationController.restaurant = restaurant;
+            
+        case "showReview":
+            let destinationController = segue.destination as! ReviewViewController
             
             destinationController.restaurant = restaurant;
+            
+        default: break;
+            
         }
     }
 
