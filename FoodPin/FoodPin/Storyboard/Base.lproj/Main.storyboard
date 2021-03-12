@@ -263,7 +263,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <segue destination="lYI-Lb-RnU" kind="presentation" identifier="showReview" id="Wgf-Nw-YPW"/>
+                                                <segue destination="lYI-Lb-RnU" kind="presentation" identifier="showReview" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Wgf-Nw-YPW"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -446,21 +446,24 @@
             <objects>
                 <viewController id="lYI-Lb-RnU" customClass="ReviewViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ICS-C0-MzR">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-OL-Oaz">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2p-0Y-F42">
-                                <rect key="frame" x="339" y="0.0" width="31" height="29.333333333333332"/>
+                                <rect key="frame" x="339" y="44" width="31" height="29.333333333333329"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="xmark" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                 </state>
+                                <connections>
+                                    <segue destination="z9R-ab-x2c" kind="unwind" unwindAction="closeWithSegue:" id="Jtq-T9-hax"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bSo-Hw-gtb">
-                                <rect key="frame" x="84" y="154.66666666666663" width="222" height="481"/>
+                                <rect key="frame" x="84" y="181.66666666666663" width="222" height="481"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOI-Aa-642">
                                         <rect key="frame" x="0.0" y="0.0" width="222" height="82"/>
@@ -468,7 +471,7 @@
                                         <state key="normal" title="Awesome" image="love"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugq-yJ-pTP">
-                                        <rect key="frame" x="0.0" y="92" width="159" height="83"/>
+                                        <rect key="frame" x="0.0" y="92.000000000000028" width="159" height="83"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="Good" image="cool"/>
                                     </button>
@@ -508,6 +511,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7DW-4e-uTW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="z9R-ab-x2c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2473.8461538461538" y="755.68720379146919"/>
         </scene>
