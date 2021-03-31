@@ -68,6 +68,22 @@ class NewRestaurantController: UITableViewController {
             
             navigationController?.navigationBar.scrollEdgeAppearance = appearance;
         }
+        
+        let margins = photoImageView.superview!.layoutMarginsGuide
+        
+        photoImageView.translatesAutoresizingMaskIntoConstraints = false;
+        
+        photoImageView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true;
+        
+        photoImageView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true;
+        
+        photoImageView.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true;
+        
+        photoImageView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true;
+        
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false;
+        view.addGestureRecognizer(tap);
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
