@@ -53,6 +53,43 @@ class NewRestaurantController: UITableViewController {
         }
     }
     
+    @IBAction func saveButton(_ sender: UIBarButtonItem!) {
+        var allOk: Bool = true;
+        if let nameText = nameTextField.text {
+            allOk = allOk && !nameText.isEmpty;
+        }
+        
+        if let typeText = typeTextField.text {
+            allOk = allOk && !typeText.isEmpty;
+        }
+        
+        if let addressText = addressTextField.text {
+            allOk = allOk && !addressText.isEmpty;
+        }
+        
+        if let phoneText = phoneTextField.text {
+            allOk = allOk && !phoneText.isEmpty;
+        }
+        
+        if let addressText = addressTextField.text {
+            allOk = allOk && !addressText.isEmpty;
+        }
+        
+        if let descriptionText = descriptionTextView.text {
+            allOk = allOk && !descriptionText.isEmpty;
+        }
+        
+        if (allOk == false) {
+            let wrongInputController = UIAlertController(title: "", message: "One of the inputs was left empty.", preferredStyle: .alert);
+            
+            self.present(wrongInputController, animated: true, completion: {
+                self.dismiss(animated: true , completion: nil);
+            });
+        } else {
+            print("All ok");
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -212,6 +212,12 @@
                                 <segue destination="hx1-mm-gg1" kind="unwind" unwindAction="unwinToHomeWithSegue:" id="JA0-Cc-DEh"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="5WN-Eg-EZD">
+                            <color key="tintColor" name="NavigationBarTitle"/>
+                            <connections>
+                                <action selector="saveButton:" destination="qwT-cB-xaA" id="NUM-UH-q7K"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="390" height="1000"/>
                     <connections>
